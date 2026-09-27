@@ -343,10 +343,89 @@ footer {
     text-align: center;
 }
 
-/* ============================================================ */
-/* YOUR TASK: Add a media query at the bottom of this file     */
-/* ============================================================ */
+/* ===================================================
+   RESPONSIVE FIXES (Screens 768px and smaller)
+   =================================================== */
+@media screen and (max-width: 768px) {
 
-/* @media screen and (max-width: 768px) { */
-/*     Add your responsive fixes here */
-/* } */
+  /* 1. Remove fixed widths on containers to prevent horizontal scrolling */
+  .site-header,
+  .hero,
+  .section,
+  .cta,
+  footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* 2. Header & Navigation layout fixes */
+  .site-header {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    white-space: normal;
+  }
+
+  /* 3. Hero section layout fixes */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* 4. Product Cards layout fixes */
+  .section-heading {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* 5. CTA Section fixes */
+  .cta h2 {
+    font-size: 28px;
+  }
+
+  .moods {
+    flex-wrap: wrap;
+  }
+}
